@@ -368,7 +368,7 @@ noremap <C-a> ggvG$
 " Set temp dir
 set dir=~/my_vim/.vim_tmp
 set backupdir=~/my_vim/.vim_tmp
-if exists('udir')
+if exists('+udir')
   set udir=~/my_vim/.vim_tmp
 endif
 
