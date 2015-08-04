@@ -37,55 +37,28 @@ let &rtp = "~/my_vim/.vim,".&rtp
 
     " set the runtime path to include Vundle and initialize
     set rtp+=~/my_vim/.vim/bundle/Vundle.vim
-    call vundle#begin()
+    call vundle#begin("~/my_vim/.vim/bundle/")
     Plugin 'gmraik/Vundle.vim'
-    "Plugin 'tpope/vim-fugitive'
-    "Plugin 'scrooloose/nerdtree'
-    "Plugin 'kien/ctrlp.vim'
-    "Plugin 'tpope/vim-surround'
-    "Plugin 'scrooloose/syntastic'
-    "Plugin 'spf13/vim-colors'
-    "Plugin 'spf13/vim-autoclose'
-    "Plugin 'flazz/vim-colorschemes'
-    "Plugin 'altercation/vim-colors-solarized'
-    "Plugin 'nathanaelkane/vim-indent-guides'
-    "Plugin 'vim-gitgutter'
-
-    " Autocomplete
-        "Bundle 'Shougo/neocomplcache'
-        "Bundle 'Shougo/neosnippet'
-        "Bundle 'Shougo/neosnippet-snippets'
-        "Bundle 'honza/vim-snippets'
-    " }
-
-    " PHP {
-        "Plugin 'spf13/PIV'
-        "Plugin 'arnaud-lb/vim-php-namespace'
-        "Plugin 'shawncplus/phpcomplete.vim'
-    " }
-
-    " Javascript {
-        ""Bundle 'elzr/vim-json'
-        ""Bundle 'groenewege/vim-less'
-        ""Bundle 'pangloss/vim-javascript'
-        ""Bundle 'briancollins/vim-jst'
-        ""Bundle 'kchmck/vim-coffee-script'
-    " }
-
-    " HTML {
-        ""Bundle 'amirh/HTML-AutoCloseTag'
-        ""Bundle 'hail2u/vim-css3-syntax'
-        ""Bundle 'gorodinskiy/vim-coloresque'
-        ""Bundle 'tpope/vim-haml'
-    " }
-
-    " Ruby {
-        ""Bundle 'tpope/vim-rails'
-        ""let g:rubycomplete_buffer_loading = 1
-        "let g:rubycomplete_classes_in_global = 1
-        "let g:rubycomplete_rails = 1
-    " }
-
+		" find files
+    Plugin 'kien/ctrlp.vim'
+		" check syntax
+    Plugin 'scrooloose/syntastic'
+		" autoclose braces
+    Plugin 'spf13/vim-autoclose'
+		" colorschemes
+    Plugin 'flazz/vim-colorschemes'
+		" html close tag
+		Plugin 'docunext/closetag.vim'
+		" auto complete for php
+		Plugin 'shawncplus/phpcomplete.vim'
+		Plugin 'ervandew/supertab'
+		Bundle 'Shougo/vimproc'
+		"Bundle 'Shougo/unite.vim'
+		Bundle 'm2mdas/phpcomplete-extended'
+		" indent for html
+		Bundle 'captbaritone/better-indent-support-for-php-with-html'
+		" syntax for css3
+		Bundle 'hail2u/vim-css3-syntax'
     call vundle#end()            " required
     filetype plugin indent on    " required
 " }
@@ -236,6 +209,7 @@ let &rtp = "~/my_vim/.vim,".&rtp
     set scrolloff=3                 " Minimum lines to keep above and below cursor
     ""set foldenable                  " Auto fold code
     set nofoldenable                " Disable autofold
+		let g:SuperTabDefaultCompletionType = "<C-X><C-O>"
     let g:DisableAutoPHPFolding = 1 " Disable autofold
     set list listchars=tab:\¦\ ,trail:•,extends:#,nbsp:. " Highlight problematic whitespace
     set list
