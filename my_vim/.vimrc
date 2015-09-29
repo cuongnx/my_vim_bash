@@ -54,11 +54,13 @@ let &rtp = "~/my_vim/.vim,".&rtp
 		Plugin 'ervandew/supertab'
 		Bundle 'Shougo/vimproc'
 		"Bundle 'Shougo/unite.vim'
-		Bundle 'm2mdas/phpcomplete-extended'
+		"Bundle 'm2mdas/phpcomplete-extended'
 		" indent for html
 		Bundle 'captbaritone/better-indent-support-for-php-with-html'
 		" syntax for css3
 		Bundle 'hail2u/vim-css3-syntax'
+		" syntax for smarty
+		Bundle 'blueyed/smarty.vim'
     call vundle#end()            " required
     filetype plugin indent on    " required
 " }
@@ -161,7 +163,7 @@ let &rtp = "~/my_vim/.vim,".&rtp
 " }
 
 " Vim UI {
-    colorscheme slate               " Load a colorscheme
+    colorscheme torte               " Load a colorscheme
     let g:indent_guides_enable_on_vim_startup=1
     set tabpagemax=15               " Only show 15 tabs
     set showmode                    " Display the current mode
@@ -396,4 +398,7 @@ if exists("+showtabline")
   set showtabline=1
   highlight link TabNum Special
 endif
+
+
+
 
