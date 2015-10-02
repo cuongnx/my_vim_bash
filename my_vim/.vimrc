@@ -61,6 +61,8 @@ let &rtp = "~/my_vim/.vim,".&rtp
 		Bundle 'hail2u/vim-css3-syntax'
 		" syntax for smarty
 		Bundle 'blueyed/smarty.vim'
+		" grep plugin
+		Bundle 'yegappan/grep'
     call vundle#end()            " required
     filetype plugin indent on    " required
 " }
@@ -399,6 +401,23 @@ if exists("+showtabline")
   highlight link TabNum Special
 endif
 
+set noundofile
 
+" setting for CtrlP
+let g:ctrlp_working_path_mode = 0
+let g:ctrlp_prompt_mappings = {
+    \ 'AcceptSelection("e")': ['<c-t>'],
+    \ 'AcceptSelection("t")': ['<cr>', '<2-LeftMouse>']
+		\ }
 
+" setting Grep plugin
+nnoremap <silent> <F3> :Grep <cword><cr><cr>
+nnoremap <silent> <F4> :Grep function\ <cword><cr><cr>
+let Grep_Default_Filelist = '~/public_html/'
+let Grep_Default_Options = '-rin --include \*.php --include \*.html'
+let Grep_Skip_Dirs = '.svn templates_c'
 
+" setting open buffer in newtab or switch to existing tab
+set switchbuf+=usetab,newtab
+
+" setting vimgrep
