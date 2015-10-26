@@ -6,7 +6,7 @@ if [ -f /etc/bashrc ]; then
 fi
 
 # User specific aliases and functions
-source /home/cuong.nx/my_bash/.bashrc
+source $HOME/my_bash/.bashrc
 
 alias gp="git pull"
 alias gpo="git push origin"

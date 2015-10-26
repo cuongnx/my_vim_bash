@@ -1,1 +1,1 @@
-source /home/cuong.nx/my_vim/.vimrc
+source $HOME/my_vim/.vimrc
