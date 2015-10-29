@@ -415,9 +415,14 @@ nnoremap <silent> <F3> :Grep <cword><cr><cr>
 nnoremap <silent> <F4> :Grep function\ <cword><cr><cr>
 let Grep_Default_Filelist = '~/public_html/'
 let Grep_Default_Options = '-rin --include \*.php --include \*.html'
-let Grep_Skip_Dirs = '.svn templates_c'
+let Grep_Skip_Dirs = '.git .svn templates_c'
 
 " setting open buffer in newtab or switch to existing tab
 set switchbuf+=usetab,newtab
 
-" setting vimgrep
+" setting quickfix window to close after open file
+aug QFClose
+	au!
+	au BufReadPost * if getbufvar(winbufnr(winnr()), "&buftype") == "quickfix" | ccl | endif
+aug END
+
