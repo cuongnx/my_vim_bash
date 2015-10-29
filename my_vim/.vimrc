@@ -423,6 +423,6 @@ set switchbuf+=usetab,newtab
 " setting quickfix window to close after open file
 aug QFClose
 	au!
-	au BufReadPost * if getbufvar(winbufnr(winnr()), "&buftype") == "quickfix" | ccl | endif
+	au BufLeave * if getbufvar(winbufnr(winnr()), "&buftype") == "quickfix" | ccl | endif
 aug END
 
