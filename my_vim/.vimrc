@@ -411,8 +411,9 @@ let g:ctrlp_prompt_mappings = {
 		\ }
 
 " setting Grep plugin
-nnoremap <silent> <F3> :Grep <cword><cr><cr>
-nnoremap <silent> <F4> :Grep function\ <cword><cr><cr>
+nnoremap <silent> <F2> :Grep <cword><cr><cr>
+nnoremap <silent> <F3> :Grep \(function\\\|class\)\ <cword><cr><cr>
+nnoremap <silent> <F4> /function\ <C-R>=expand('<cword>')<cr><cr>
 let Grep_Default_Filelist = '~/public_html/'
 let Grep_Default_Options = '-rin --include \*.php --include \*.html'
 let Grep_Skip_Dirs = '.git .svn templates_c'
