@@ -18,3 +18,7 @@ alias gcm="git commit"
 alias gl="git log"
 alias gst="git status"
 alias ga="git add"
+
+alias rmvim="rm -f ~/my_vim/.vim_tmp/*"
+
+HISTTIMEFORMAT="%d/%m/%y %T "

@@ -91,7 +91,7 @@ let &rtp = "~/my_vim/.vim,".&rtp
     filetype plugin indent on   " Automatically detect file types.
 		set ffs=dos,unix,mac
     syntax on                   " Syntax highlighting
-    "set mouse=a                 " Automatically enable mouse usage
+    set mouse=v                 " Automatically enable mouse usage
     set mousehide               " Hide the mouse cursor while typing
     scriptencoding utf-8
     set fileencodings=iso-2022-jp,euc-jp,cp932,utf8,default,latin1
@@ -337,12 +337,6 @@ if has("gui_running")
 endif
 " }
 
-
-" My shortcuts 
-vnoremap <C-c> "*y
-noremap <C-v> "*p
-noremap <C-a> ggvG$
-
 " Set temp dir
 set dir=~/my_vim/.vim_tmp
 set backupdir=~/my_vim/.vim_tmp
@@ -414,9 +408,11 @@ let g:ctrlp_prompt_mappings = {
 nnoremap <silent> <F2> :Grep <cword><cr><cr>
 nnoremap <silent> <F3> :Grep \(function\\\|class\)\ <cword><cr><cr>
 nnoremap <silent> <F4> /function\ <C-R>=expand('<cword>')<cr><cr>
-let Grep_Default_Filelist = '~/public_html/'
-let Grep_Default_Options = '-rin --include \*.php --include \*.html'
-let Grep_Skip_Dirs = '.git .svn templates_c'
+
+" My shortcuts 
+vnoremap <C-c> "*y
+noremap <C-v> "*p
+noremap <C-a> ggvG$
 
 " setting open buffer in newtab or switch to existing tab
 set switchbuf+=usetab,newtab
