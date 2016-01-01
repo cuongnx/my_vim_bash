@@ -8,6 +8,8 @@ fi
 # User specific aliases and functions
 source $HOME/mbash/.bashrc
 
+alias ll="ls -la --color=auto"
+
 alias gp="git pull"
 alias gpo="git push origin"
 alias gd="git diff"
@@ -19,6 +21,6 @@ alias gl="git log"
 alias gst="git status"
 alias ga="git add"
 
-alias rmvim="rm -f ~/mvim/.vim_tmp/*"
+alias rmvim="rm -f ~/mvim/tmp/!(dont_remove)"
 
 HISTTIMEFORMAT="%d/%m/%y %T "

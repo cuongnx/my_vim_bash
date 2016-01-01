@@ -338,10 +338,10 @@ endif
 " }
 
 " Set temp dir
-set dir=~/mvim/.vim_tmp
-set backupdir=~/mvim/.vim_tmp
+set dir=~/mvim/tmp
+set backupdir=~/mvim/tmp
 if exists('+udir')
-  set udir=~/mvim/.vim_tmp
+  set udir=~/mvim/tmp
 endif
 
 " set word wrap
