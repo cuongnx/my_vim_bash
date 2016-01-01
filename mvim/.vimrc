@@ -29,15 +29,15 @@
 
 " }
 
-let &rtp = "~/my_vim/.vim,".&rtp
+let &rtp = "~/mvim/.vim,".&rtp
 
 " Bundles config {
     set nocompatible              " be iMproved, required
     filetype off                  " required
 
     " set the runtime path to include Vundle and initialize
-    set rtp+=~/my_vim/.vim/bundle/Vundle.vim
-    call vundle#begin("~/my_vim/.vim/bundle/")
+    set rtp+=~/mvim/.vim/bundle/Vundle.vim
+    call vundle#begin("~/mvim/.vim/bundle/")
     Plugin 'gmraik/Vundle.vim'
 		" find files
     Plugin 'kien/ctrlp.vim'
@@ -338,10 +338,10 @@ endif
 " }
 
 " Set temp dir
-set dir=~/my_vim/.vim_tmp
-set backupdir=~/my_vim/.vim_tmp
+set dir=~/mvim/.vim_tmp
+set backupdir=~/mvim/.vim_tmp
 if exists('+udir')
-  set udir=~/my_vim/.vim_tmp
+  set udir=~/mvim/.vim_tmp
 endif
 
 " set word wrap

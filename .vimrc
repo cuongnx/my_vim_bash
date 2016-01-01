@@ -1,4 +1,4 @@
-source $HOME/my_vim/.vimrc
+source $HOME/mvim/.vimrc
 
 let Grep_Default_Filelist = '~/public_html/'
 let Grep_Default_Options = '-rin --include \*.php --include \*.html'
