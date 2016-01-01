@@ -11,7 +11,8 @@
 #fi
 
 # Load in the git branch prompt script.
-source ~/my_bash/git-prompt.sh
+source ~/mbash/git-prompt.sh
+
 bash_prompt() {
     case $TERM in
         xterm*|rxvt*)
