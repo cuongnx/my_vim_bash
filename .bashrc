@@ -21,6 +21,6 @@ alias gl="git log"
 alias gst="git status"
 alias ga="git add"
 
-alias rmvim="rm -f ~/mvim/tmp/!(dont_remove)"
+alias rmvim="find ~/mvim/tmp -type f -not -name .dont_remove -execdir bash -c 'rm {}' \;"
 
 HISTTIMEFORMAT="%d/%m/%y %T "
