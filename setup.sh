@@ -27,11 +27,11 @@ if [ -f $HOME_BASHRC ]
 then
 	if [ -n "`grep -i "$BASHRC_INCLUDE" $HOME_BASHRC`" ]
 	then
-		bashrc_setup=1
+		bashrc_setup=0
 		echo "> Already setup bashrc"
 	fi
 fi
-if [ $bashrc_setup ]; then echo $BASHRC_INCLUDE >> $HOME_BASHRC && echo "> Done: setup bashrc"; fi
+if (($bashrc_setup)); then echo $BASHRC_INCLUDE >> $HOME_BASHRC && echo "> Done: setup bashrc"; fi
 
 # setup vimrc
 cp -r $MVIM_DIR $HOME/
@@ -50,4 +50,4 @@ then
 		echo "> Already setup vimrc"
 	fi
 fi
-if [ $vimrc_setup ]; then echo $VIMRC_INCLUDE >> $HOME_VIMRC && echo "> Done: setup vimrc"; fi
+if (($vimrc_setup)); then echo $VIMRC_INCLUDE >> $HOME_VIMRC && echo "> Done: setup vimrc"; fi
