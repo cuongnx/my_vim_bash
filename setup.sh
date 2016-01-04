@@ -22,16 +22,16 @@ then
 	echo "> Done: copy mbash files to $HOME"
 fi
 
+bashrc_setup=1
 if [ -f $HOME_BASHRC ]
 then
 	if [ -n "`grep -i "$BASHRC_INCLUDE" $HOME_BASHRC`" ]
 	then
+		bashrc_setup=1
 		echo "> Already setup bashrc"
-	else
-		echo $BASHRC_INCLUDE >> $HOME_BASHRC
-		echo "> Done: setup bashrc"
 	fi
 fi
+if [ $bashrc_setup ]; then echo $BASHRC_INCLUDE >> $HOME_BASHRC && echo "> Done: setup bashrc"; fi
 
 # setup vimrc
 cp -r $MVIM_DIR $HOME/
@@ -41,14 +41,13 @@ then
 	echo "> Done: copy mvim files to $HOME"
 fi
 
+vimrc_setup=1
 if [ -f $HOME_VIMRC ]
 then
 	if [ -n "`grep -i "$VIMRC_INCLUDE" $HOME_VIMRC`" ]
 	then
+		vimrc_setup=0
 		echo "> Already setup vimrc"
-	else
-		echo $VIMRC_INCLUDE >> $HOME_VIMRC
-		echo "> Done: setup vimrc"
 	fi
 fi
-
+if [ $vimrc_setup ]; then echo $VIMRC_INCLUDE >> $HOME_VIMRC && echo "> Done: setup vimrc"; fi
