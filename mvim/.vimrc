@@ -49,12 +49,8 @@ let &rtp = "~/mvim/.vim,".&rtp
     Plugin 'flazz/vim-colorschemes'
 		" html close tag
 		Plugin 'docunext/closetag.vim'
-		" auto complete for php
-		Plugin 'shawncplus/phpcomplete.vim'
-		Plugin 'ervandew/supertab'
-		Bundle 'Shougo/vimproc'
-		"Bundle 'Shougo/unite.vim'
-		"Bundle 'm2mdas/phpcomplete-extended'
+		" auto complete 
+		Plugin 'Shougo/neocomplcache.vim'
 		" indent for html
 		Bundle 'captbaritone/better-indent-support-for-php-with-html'
 		" syntax for css3
@@ -423,3 +419,5 @@ aug QFClose
 	au BufLeave * if getbufvar(winbufnr(winnr()), "&buftype") == "quickfix" | ccl | endif
 aug END
 
+" setting for Neocomplcache
+source ~/my_vim_bash/mvim/.neocomplcacherc
