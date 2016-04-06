@@ -400,4 +400,10 @@ source ~/mvim/.neocomplcacherc
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#tab_nr_type = 1
 let g:airline#extensions#tabline#buffer_idx_mode = 1
-let g:airline#extensions#tabline#fnamemod = ':p:.'
+let g:airline#extensions#tabline#fnamemod = ':t:.'
+let g:airline#extensions#tabline#show_tab_type = 0
+let g:airline#extensions#tabline#show_splits = 0
+" let g:airline_section_warning = '%{airline#util#wrap(airline#extensions#whitespace#check(),0)}'
+" let g:airline_section_error = %{airline#util#wrap(airline#extensions#syntastic#get_warnings(),0)}'
+let g:airline_section_warning = ''
+let g:airline_section_error = ''
