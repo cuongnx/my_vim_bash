@@ -306,8 +306,9 @@ endif
 " Set temp dir
 set dir=~/mvim/tmp
 set backupdir=~/mvim/tmp
-if exists('+udir')
+if has('persistent_undo')
     set udir=~/mvim/tmp
+    set noundofile
 endif
 
 " set word wrap
@@ -360,7 +361,6 @@ if exists("+showtabline")
     highlight link TabNum Special
 endif
 
-set noundofile
 
 " setting showing last format configuration
 set laststatus=2
