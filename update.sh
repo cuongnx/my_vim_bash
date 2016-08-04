@@ -26,12 +26,12 @@ fi
 
 # check if need to pull master
 # 1. check working dir is dirty
-CHECK_DIRTY_CMD="git status -suno"
-if [ "`$CHECK_DIRTY_CMD`" ]
-then
-	echo "> Failed: app directory is dirty"
-	exit 1
-fi
+#CHECK_DIRTY_CMD="git status -suno"
+#if [ "`$CHECK_DIRTY_CMD`" ]
+#then
+#	echo "> Failed: app directory is dirty"
+#	exit 1
+#fi
 
 # try to pull, pull quietly, not quiet means there is something wrong
 UPD_CMD="git pull -q origin master"

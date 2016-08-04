@@ -11,17 +11,10 @@ MBASH_DIR="$APP_DIR/mbash"
 MVIM_DIR="$APP_DIR/mvim"
 
 # command to include in corresponding file
-BASHRC_INCLUDE="source $APP_DIR/.bashrc"
-VIMRC_INCLUDE="source $APP_DIR/.vimrc"
+BASHRC_INCLUDE="source $MBASH_DIR/.bashrc"
+VIMRC_INCLUDE="source $MVIM_DIR/.vimrc"
 
 # setup bashrc
-cp -r $MBASH_DIR $HOME/
-
-if [ $? -eq 0 ]
-then
-	echo "> Done: copy mbash files to $HOME"
-fi
-
 bashrc_setup=1
 if [ -f $HOME_BASHRC ]
 then
@@ -34,13 +27,6 @@ fi
 if (($bashrc_setup)); then echo $BASHRC_INCLUDE >> $HOME_BASHRC && echo "> Done: setup bashrc"; fi
 
 # setup vimrc
-cp -r $MVIM_DIR $HOME/
-
-if [ $? -eq 0 ]
-then
-	echo "> Done: copy mvim files to $HOME"
-fi
-
 vimrc_setup=1
 if [ -f $HOME_VIMRC ]
 then

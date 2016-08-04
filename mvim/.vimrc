@@ -29,15 +29,13 @@ endif
 
 " }
 
-let &rtp = "~/mvim/.vim,".&rtp
-
 " Bundles config {
 set nocompatible              " be iMproved, required
 filetype off                  " required
 
 " set the runtime path to include Vundle and initialize
-set rtp+=~/mvim/.vim/bundle/Vundle.vim
-call vundle#begin("~/mvim/.vim/bundle/")
+set rtp+=~/my_vim_bash/mvim/.vim/bundle/Vundle.vim
+call vundle#begin("~/my_vim_bash/mvim/.vim/bundle/")
 Plugin 'gmraik/Vundle.vim'
 " find files
 Plugin 'kien/ctrlp.vim'
@@ -57,7 +55,7 @@ Plugin 'Shougo/neocomplcache.vim'
 " custom statusline, tabline
 Plugin 'vim-airline/vim-airline'
 " indent for html
-Bundle 'captbaritone/better-indent-support-for-php-with-html'
+Plugin '2072/PHP-Indenting-for-VIm'
 " syntax for smarty
 Bundle 'blueyed/smarty.vim'
 " grep plugin
@@ -65,6 +63,8 @@ Bundle 'yegappan/grep'
 call vundle#end()            " required
 filetype plugin indent on    " required
 " }
+
+let &rtp = "~/my_vim_bash/mvim/.vim,".&rtp
 
 " General {
 " Set color for xterm-256color
@@ -304,10 +304,10 @@ endif
 " }
 
 " Set temp dir
-set dir=~/mvim/tmp
-set backupdir=~/mvim/tmp
+set dir=~/my_vim_bash/mvim/tmp
+set backupdir=~/my_vim_bash/mvim/tmp
 if has('persistent_undo')
-    set udir=~/mvim/tmp
+    set udir=~/my_vim_bash/mvim/tmp
     set noundofile
 endif
 
@@ -394,7 +394,7 @@ aug QFClose
 aug END
 
 " setting for Neocomplcache
-source ~/mvim/.neocomplcacherc
+source ~/.neocomplcacherc
 
 " setting for vim-airline
 let g:airline#extensions#tabline#enabled = 1
