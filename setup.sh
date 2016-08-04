@@ -11,8 +11,8 @@ MBASH_DIR="$APP_DIR/mbash"
 MVIM_DIR="$APP_DIR/mvim"
 
 # command to include in corresponding file
-BASHRC_INCLUDE="source $MBASH_DIR/.bashrc"
-VIMRC_INCLUDE="source $MVIM_DIR/.vimrc"
+BASHRC_INCLUDE="source $APP_DIR/.bashrc"
+VIMRC_INCLUDE="source $APP_DIR/.vimrc"
 
 # setup bashrc
 bashrc_setup=1

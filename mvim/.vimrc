@@ -394,7 +394,7 @@ aug QFClose
 aug END
 
 " setting for Neocomplcache
-source ~/.neocomplcacherc
+source ~/my_vim_bash/mvim/.neocomplcacherc
 
 " setting for vim-airline
 let g:airline#extensions#tabline#enabled = 1
