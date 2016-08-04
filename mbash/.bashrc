@@ -11,7 +11,7 @@
 #fi
 
 # Load in the git branch prompt script.
-source ~/mbash/git-prompt.sh
+source ~/my_vim_bash/mbash/git-prompt.sh
 
 bash_prompt() {
     case $TERM in
