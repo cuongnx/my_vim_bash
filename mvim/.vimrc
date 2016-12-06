@@ -56,10 +56,20 @@ Plugin 'Shougo/neocomplcache.vim'
 Plugin 'vim-airline/vim-airline'
 " indent for html
 Plugin '2072/PHP-Indenting-for-VIm'
+Plugin 'captbaritone/better-indent-support-for-php-with-html'
+" indent, syntax for javscript
+Plugin 'pangloss/vim-javascript'
 " syntax for smarty
 Bundle 'blueyed/smarty.vim'
 " grep plugin
 Bundle 'yegappan/grep'
+" snipmate
+Plugin 'MarcWeber/vim-addon-mw-utils'
+Plugin 'tomtom/tlib_vim'
+Plugin 'garbas/vim-snipmate'
+
+" Optional:
+Plugin 'honza/vim-snippets'
 call vundle#end()            " required
 filetype plugin indent on    " required
 " }
@@ -88,12 +98,12 @@ set background=dark         " Assume a dark background
 "set term=$TERM          " Make arrow and other keys work
 " endif
 filetype plugin indent on   " Automatically detect file types.
-set ffs=dos,unix,mac
+set ffs=unix,dos,mac
 syntax on                   " Syntax highlighting
 set mouse=v                 " Automatically enable mouse usage
 set mousehide               " Hide the mouse cursor while typing
 scriptencoding utf-8
-set fileencodings=iso-2022-jp,euc-jp,cp932,utf8,default,latin1
+set fileencodings=utf-8,iso-2022-jp,euc-jp,cp932,default,latin1
 
 if has('clipboard')
     if has('unnamedplus')  " When possible use + register for copy-paste
