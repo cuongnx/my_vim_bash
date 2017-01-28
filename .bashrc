@@ -13,7 +13,7 @@ fi
 # User specific aliases and functions
 source $HOME/my_vim_bash/mbash/.bashrc
 
-alias ll="ls -la --color=auto"
+alias ll="ls -la"
 
 alias gp="git pull"
 alias gpo="git push origin"
