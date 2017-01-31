@@ -36,7 +36,8 @@ filetype off                  " required
 " set the runtime path to include Vundle and initialize
 set rtp+=~/my_vim_bash/mvim/.vim/bundle/Vundle.vim
 call vundle#begin("~/my_vim_bash/mvim/.vim/bundle/")
-Plugin 'gmraik/Vundle.vim'
+" let Vundle manage Vundle, required
+Plugin 'VundleVim/Vundle.vim'
 " find files
 Plugin 'kien/ctrlp.vim'
 " check syntax
