@@ -29,3 +29,4 @@ alias ga="git add"
 alias rmvim="find ~/my_vim_bash/mvim/tmp -type f -not -name .dont_remove -execdir bash -c 'rm {}' \;"
 
 HISTTIMEFORMAT="%d/%m/%y %T "
+export LC_ALL=en_US.UTF-8
