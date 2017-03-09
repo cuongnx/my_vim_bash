@@ -44,6 +44,8 @@ Plugin 'kien/ctrlp.vim'
 Plugin 'scrooloose/syntastic'
 " comment shortcuts
 Plugin 'scrooloose/nerdcommenter'
+Plugin 'scrooloose/nerdtree'
+Plugin 'jistr/vim-nerdtree-tabs'
 " colorschemes
 Plugin 'flazz/vim-colorschemes'
 Plugin 'evgenyzinoviev/vim-vendetta'
@@ -417,3 +419,6 @@ let g:airline#extensions#tabline#show_splits = 0
 " let g:airline_section_error = %{airline#util#wrap(airline#extensions#syntastic#get_warnings(),0)}'
 let g:airline_section_warning = ''
 let g:airline_section_error = ''
+
+" setting NERDTreeTabs
+let g:nerdtree_tabs_open_on_console_startup = 1
