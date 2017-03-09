@@ -386,6 +386,8 @@ let g:ctrlp_prompt_mappings = {
 nnoremap <silent> <F2> :Grep <cword><cr><cr>
 nnoremap <silent> <F3> :Grep \(function\\\|class\)\ <cword><cr><cr>
 nnoremap <silent> <F4> /function\ <C-R>=expand('<cword>')<cr><cr>
+let Grep_Default_Filelist=getcwd().'/*'
+let Grep_Default_Options='-rn --include=*.{php,html,js,css}'
 
 " My shortcuts 
 vnoremap <C-c> "*y
