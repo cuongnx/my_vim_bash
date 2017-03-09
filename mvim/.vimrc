@@ -45,7 +45,6 @@ Plugin 'scrooloose/syntastic'
 " comment shortcuts
 Plugin 'scrooloose/nerdcommenter'
 Plugin 'scrooloose/nerdtree'
-Plugin 'jistr/vim-nerdtree-tabs'
 " colorschemes
 Plugin 'flazz/vim-colorschemes'
 Plugin 'evgenyzinoviev/vim-vendetta'
@@ -219,10 +218,10 @@ set list
 
 set nowrap                      " Do not wrap long lines
 set autoindent                  " Indent at the same level of the previous line
-set shiftwidth=2                " Use indents of 4 spaces
-"set expandtab                   " Tabs are spaces, not tabs
-set tabstop=2                   " An indentation every four columns
-set softtabstop=2               " Let backspace delete indent
+set shiftwidth=4                " Use indents of 4 spaces
+set expandtab                   " Tabs are spaces, not tabs
+set tabstop=4                   " An indentation every four columns
+set softtabstop=4               " Let backspace delete indent
 set nojoinspaces                " Prevents inserting two spaces after punctuation on a join (J)
 set splitright                  " Puts new vsplit windows to the right of the current
 set splitbelow                  " Puts new split windows to the bottom of the current
@@ -419,6 +418,3 @@ let g:airline#extensions#tabline#show_splits = 0
 " let g:airline_section_error = %{airline#util#wrap(airline#extensions#syntastic#get_warnings(),0)}'
 let g:airline_section_warning = ''
 let g:airline_section_error = ''
-
-" setting NERDTreeTabs
-let g:nerdtree_tabs_open_on_console_startup = 1
