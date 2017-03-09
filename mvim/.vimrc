@@ -64,13 +64,10 @@ Plugin 'pangloss/vim-javascript'
 Bundle 'blueyed/smarty.vim'
 " grep plugin
 Bundle 'yegappan/grep'
-" snipmate
-Plugin 'MarcWeber/vim-addon-mw-utils'
-Plugin 'tomtom/tlib_vim'
-Plugin 'garbas/vim-snipmate'
+" one dark theme
+Plugin 'joshdick/onedark.vim'
 
 " Optional:
-Plugin 'honza/vim-snippets'
 call vundle#end()            " required
 filetype plugin indent on    " required
 " }
@@ -175,7 +172,7 @@ endif
 " }
 
 " Vim UI {
-colorscheme torte               " Load a colorscheme
+colorscheme onedark               " Load a colorscheme
 let g:indent_guides_enable_on_vim_startup=1
 set tabpagemax=50               " Only show 15 tabs
 set showmode                    " Display the current mode
