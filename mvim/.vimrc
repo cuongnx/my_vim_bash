@@ -418,3 +418,6 @@ let g:airline#extensions#tabline#show_splits = 0
 " let g:airline_section_error = %{airline#util#wrap(airline#extensions#syntastic#get_warnings(),0)}'
 let g:airline_section_warning = ''
 let g:airline_section_error = ''
+
+" setting highlight search color
+hi Search ctermfg=yellow ctermbg=red
