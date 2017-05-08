@@ -173,7 +173,7 @@ endif
 " }
 
 " Vim UI {
-colorscheme onedark               " Load a colorscheme
+silent! colorscheme onedark               " Load a colorscheme
 let g:indent_guides_enable_on_vim_startup=1
 set tabpagemax=50               " Only show 15 tabs
 set showmode                    " Display the current mode
