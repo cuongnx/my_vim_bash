@@ -7,13 +7,11 @@ if (defined $u_a[1])
 {
     if ( $^O == 'linux' )
     {
-        #exec ("/usr/bin/ssh $u_a[0]\@$u_a[1] @ARGV");
-        exec ("ssh $u_a[0]\@$u_a[1] @ARGV");
+        exec ("/usr/bin/ssh $u_a[0]\@$u_a[1] @ARGV");
     }
     if ( $^O == 'solaris' )
     {
-        #exec ("/usr/local/bin/ssh $u_a[0]\@$u_a[1] @ARGV");
-        exec ("ssh $u_a[0]\@$u_a[1] @ARGV");
+        exec ("/usr/local/bin/ssh $u_a[0]\@$u_a[1] @ARGV");
     }
 }
 else
@@ -23,12 +21,10 @@ else
     chomp ( $username );
     if ( $^O == 'linux' )
     {
-        #exec ("/usr/bin/ssh $username\@$u_a[0] @ARGV");
-        exec ("ssh $username\@$u_a[0] @ARGV");
+        exec ("/usr/bin/ssh $username\@$u_a[0] @ARGV");
     }
     if ( $^O == 'solaris' )
     {
-        #exec ("/usr/local/bin/ssh $username\@$u_a[0] @ARGV");
-        exec ("ssh $username\@$u_a[0] @ARGV");
+        exec ("/usr/local/bin/ssh $username\@$u_a[0] @ARGV");
     }
 }
