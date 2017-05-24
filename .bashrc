@@ -37,7 +37,8 @@ alias ga="git add"
 # __git_complete gl _git_log
 # __git_complete gst _git_status
 
-alias rmvim="find ~/my_vim_bash/mvim/tmp -type f -not -name .dont_remove -execdir bash -c 'rm {}' \;"
+alias rmvim="find ~/my_vim_bash/mvim/tmp -type f -not -name .gitignore -execdir bash -c 'rm {}' \;"
+alias ssh=$HOME/my_vim_bash/mbash/ssh
 
 HISTTIMEFORMAT="%d/%m/%y %T "
 export LC_ALL=en_US.UTF-8
