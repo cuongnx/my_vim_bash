@@ -1,17 +1,12 @@
-# .bashrc
+# Load .bash_aliases
+#if [ -f ~/.bash/bash_aliases ]; then
+#    . ~/.bash/bash_aliases
+#fi
 
-# Source global definitions
-if [ -f /etc/bashrc ]; then
-	. /etc/bashrc
-fi
-
-# Uncomment the following line if you don't like systemctl's auto-paging feature:
-# export SYSTEMD_PAGER=
-
-# User specific aliases and functions
-
-# User specific aliases and functions
-source $HOME/my_vim_bash/mbash/.bashrc
+# Load .bash_functions
+#if [ -f ~/.bash/bash_functions ]; then
+#    . ~/.bash/bash_functions
+#fi
 
 alias ll="ls -la"
 
@@ -26,6 +21,8 @@ alias gl="git log"
 alias gst="git status"
 alias ga="git add"
 
+alias rmvim="find ~/my_vim_bash/mvim/tmp -type f -not -name .gitignore -execdir bash -c 'rm {}' \;"
+
 # for setting in git-completion.bash
 # __git_complete gco _git_checkout
 # __git_complete gp _git_pull
@@ -37,8 +34,5 @@ alias ga="git add"
 # __git_complete gl _git_log
 # __git_complete gst _git_status
 
-alias rmvim="find ~/my_vim_bash/mvim/tmp -type f -not -name .gitignore -execdir bash -c 'rm {}' \;"
-#alias ssh=$HOME/my_vim_bash/mbash/ssh
 
-HISTTIMEFORMAT="%d/%m/%y %T "
-export LC_ALL=en_US.UTF-8
+
