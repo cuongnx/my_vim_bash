@@ -38,35 +38,55 @@ set rtp+=~/my_vim_bash/mvim/.vim/bundle/Vundle.vim
 call vundle#begin("~/my_vim_bash/mvim/.vim/bundle/")
 " let Vundle manage Vundle, required
 Plugin 'VundleVim/Vundle.vim'
+
 " find files
 Plugin 'kien/ctrlp.vim'
+
 " check syntax
 Plugin 'scrooloose/syntastic'
+
 " comment shortcuts
 Plugin 'scrooloose/nerdcommenter'
+
+" NerdTree
 Plugin 'scrooloose/nerdtree'
+
 " colorschemes
 Plugin 'flazz/vim-colorschemes'
 Plugin 'evgenyzinoviev/vim-vendetta'
-" html close tag
-Plugin 'docunext/closetag.vim'
-" autoclose braces
-Plugin 'Raimondi/delimitMate'
-" auto complete 
-Plugin 'Shougo/neocomplcache.vim'
-" custom statusline, tabline
-Plugin 'vim-airline/vim-airline'
-" indent for html
-Plugin '2072/PHP-Indenting-for-VIm'
-Plugin 'captbaritone/better-indent-support-for-php-with-html'
-" indent, syntax for javscript
-Plugin 'pangloss/vim-javascript'
-" syntax for smarty
-Bundle 'blueyed/smarty.vim'
-" grep plugin
-Bundle 'yegappan/grep'
 " one dark theme
 Plugin 'joshdick/onedark.vim'
+
+" custom statusline, tabline
+Plugin 'vim-airline/vim-airline'
+
+" autoclose braces
+Plugin 'Raimondi/delimitMate'
+" edit surrounding tags
+Plugin 'tpope/vim-surround'
+" html close tag
+Plugin 'docunext/closetag.vim'
+
+" git wrapper
+Plugin 'tpope/vim-fugitive'
+
+" sublime multiple cursors
+Plugin 'terryma/vim-multiple-cursors'
+
+" auto recognize indent
+Plugin 'tpope/vim-sleuth'
+
+" auto complete 
+Plugin 'Shougo/neocomplcache.vim'
+
+" grep plugin
+Bundle 'yegappan/grep'
+
+" indent, syntax for javscript
+Plugin 'pangloss/vim-javascript'
+
+" column highlight with csv
+Plugin 'chrisbra/csv.vim'
 
 " Optional:
 call vundle#end()            " required
@@ -226,19 +246,7 @@ set nojoinspaces                " Prevents inserting two spaces after punctuatio
 set splitright                  " Puts new vsplit windows to the right of the current
 set splitbelow                  " Puts new split windows to the bottom of the current
 set pastetoggle=<F12>           " pastetoggle (sane indentation on pastes)
-"set comments=sl:/*,mb:*,elx:*/  " auto format comment blocks
-"autocmd FileType go autocmd BufWritePre <buffer> Fmt
-autocmd BufNewFile,BufRead *.html.twig set filetype=html.twig
-autocmd FileType haskell setlocal expandtab shiftwidth=2 softtabstop=2
-" preceding line best in a plugin but here for now.
-
-autocmd BufNewFile,BufRead *.coffee set filetype=coffee
-
-" Workaround vim-commentary for Haskell
-autocmd FileType haskell setlocal commentstring=--\ %s
-" Workaround broken colour highlighting in Haskell
-autocmd FileType haskell setlocal nospell
-
+set comments=sl:/*,mb:*,elx:*/  " auto format comment blocks
 " }
 " }
 
@@ -319,11 +327,6 @@ if has('persistent_undo')
     set udir=~/my_vim_bash/mvim/tmp
     set noundofile
 endif
-
-" set word wrap
-set wrap
-set linebreak
-set nolist  " list disables linebreak
 
 " ename tabs to show tab number.
 " (Based on http://stackoverflow.com/questions/5927952/whats-implementation-of-vims-default-tabline-function)
